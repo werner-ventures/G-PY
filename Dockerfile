@@ -9,5 +9,5 @@ RUN wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-p
     rm -rf /var/lib/apt/lists/*
 RUN conda install libgcc setuptools cmake jupyterlab jupyterlab-sos libsndfile mkl zeromq pip && \
     export SETUPTOOLS_USE_DISTUTILS=stdlib && \
-    pip install --no-cache-dir --platform modin[all] wheel onnxruntime-gpu pycparser nimbusml pycuda horovod nvidia-pyindex jupyter_c_kernel hummingbird-ml fastai h2o ffmpeg chaostoolkit chaostoolkit-google-cloud-platform && \
+    pip install --no-cache-dir modin[all] wheel onnxruntime-gpu pycparser nimbusml pycuda horovod nvidia-pyindex jupyter_c_kernel hummingbird-ml fastai h2o ffmpeg chaostoolkit chaostoolkit-google-cloud-platform && \
     install_c_kernel

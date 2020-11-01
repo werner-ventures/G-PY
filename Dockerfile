@@ -7,7 +7,7 @@ RUN wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-p
     apt-get install -y --no-install-recommends build-essential dotnet-sdk-3.1 powershell clang mono-complete ca-certificates curl file g++ git locales make uuid-runtime && \
     conda update --all && \
     rm -rf /var/lib/apt/lists/*
-RUN conda install libgcc setuptools cmake jupyterlab jupyterlab-sos xeus-cling xwidgets libsndfile mkl zeromq pip && \
+RUN conda install libgcc setuptools cmake jupyterlab jupyterlab-sos libsndfile mkl zeromq pip && \
     export SETUPTOOLS_USE_DISTUTILS=stdlib && \
     pip install --no-cache-dir modin[all] wheel onnxruntime-gpu pycparser nimbusml pycuda horovod nvidia-pyindex jupyter_c_kernel hummingbird-ml fastai h2o ffmpeg chaostoolkit chaostoolkit-google-cloud-platform && \
     install_c_kernel
